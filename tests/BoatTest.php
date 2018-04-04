@@ -16,10 +16,18 @@ class BoatTest extends TestCase
         $this->boat = new Boat('boat');
     }
 
-   public function testName()
+    public function testName()
     {
         $this->assertObjectHasAttribute('name', $this->boat);
         $this->assertEquals($this->boat->name, 'boat');
         $this->assertNotEquals($this->boat->name, 'bmw');
+    }
+
+    public function testVehicle(){
+        $this->assertEquals($this->boat instanceof Vehicle, true);
+    }
+
+    public function testIVehicle(){
+        $this->assertEquals($this->boat instanceof IVehicle, true);
     }
 }

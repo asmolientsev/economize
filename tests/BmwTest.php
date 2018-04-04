@@ -23,4 +23,11 @@ class BmwTest extends TestCase
         $this->assertNotEquals($this->bmw->name, 'boat');
     }
 
+    public function testVehicle(){
+    	$this->assertEquals($this->bmw instanceof Vehicle, true);
+    }
+
+    public function testIVehicle(){
+    	$this->assertEquals($this->bmw instanceof IVehicle, true);
+    }
 }
